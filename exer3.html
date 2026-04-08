@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        h1 {
+            color: lightgreen;
+        }
+
+    </style>
+    <script>
+        window.onload = inicio;
+
+        function inicio() {
+            let memoria = 0;
+
+            let botaoG = document.getElementById('btn_guardar');
+            botaoG.addEventListener('click', guardar);
+
+            let botaoA = document.getElementById('btn_adicionar');
+            botaoA.addEventListener('click', adicionar);
+
+            let botaoR = document.getElementById('btn_retirar');
+            botaoR.addEventListener('click', retirar);
+
+            let botaoL = document.getElementById('btn_limpar');
+            botaoL.addEventListener('click', limpar);
+
+            let botaoM = document.getElementById('btn_mostrar');
+            botaoM.addEventListener('click', mostrar);
+           
+        }
+
+        function guardar() {
+            let campo = document.getElementById('numero');
+            let numero = parseInt(campo.value);
+            //memoria += numero;
+            
+
+            mensagem = `Digitado: ${numero}`;
+            let saida = document.getElementById('saida');
+            saida.innerHTML = mensagem;
+        }
+
+        function adicionar() {
+
+
+        }
+
+        function retirar() {
+
+        }
+
+        function limpar() {
+
+        }
+
+        function mostrar() {
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="number" id="numero">
+    <h2 id="saida"></h2>
+    <div class="botoes">
+        <button id="btn_guardar">Guardar</button>
+        <button id="btn_adicionar">Adicionar</button>
+        <button id="btn_retirar">Retirar</button>
+        <button id="btn_limpar">Limpar</button>
+        <button id="btn_mostrar">Mostrar</button>
+    </div>
+    
+</body>
+
+</html>

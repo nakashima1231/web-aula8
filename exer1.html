@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática 1</title>
+    <script>
+        window.onload = inicio;
+
+        function inicio() {
+            let botao = document.getElementById('btn_calcular');
+            botao.addEventListener('click', calculo);
+        }
+
+        function calculo() {
+            let saida = document.getElementById('resultado');
+            let x = area(4);
+            let msg = `O raio é ${x}`;
+            saida.innerHTML = msg;
+        }   
+
+        function area(raio) {
+            let valor = raio * raio * Math.PI;
+            return valor;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Aperte o botão</h1>
+    <p id="resultado">Resultado...</p>
+    <button id="btn_calcular">Calcular</button>
+    <p id="msg"></p>
+</body>
+
+</html>
