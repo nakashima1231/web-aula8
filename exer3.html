@@ -13,9 +13,10 @@
     </style>
     <script>
         window.onload = inicio;
+        let memoria = 0;
 
         function inicio() {
-            let memoria = 0;
+            
 
             let botaoG = document.getElementById('btn_guardar');
             botaoG.addEventListener('click', guardar);
@@ -37,29 +38,32 @@
         function guardar() {
             let campo = document.getElementById('numero');
             let numero = parseInt(campo.value);
-            //memoria += numero;
-            
-
-            mensagem = `Digitado: ${numero}`;
-            let saida = document.getElementById('saida');
-            saida.innerHTML = mensagem;
+            memoria = numero;
         }
 
         function adicionar() {
-
+            let campo = document.getElementById('numero');
+            let numero = parseInt(campo.value);
+            memoria = memoria + numero;
 
         }
 
         function retirar() {
-
+            let campo = document.getElementById('numero');
+            let numero = parseInt(campo.value);
+            memoria -= numero;
         }
 
         function limpar() {
-
+            memoria = null;
         }
 
         function mostrar() {
-
+            let campo = document.getElementById('numero');
+            let numero = parseInt(campo.value);
+            let mensagem = `Memoria: ${numero}`;
+            let saida = document.getElementById('saida');
+            saida.innerHTML = mensagem;
         }
 
     </script>
